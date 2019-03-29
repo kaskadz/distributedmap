@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'pl.edu.agh.kaskadz.sr'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'org.jgroups', name: 'jgroups', version: '3.6.17.Final'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'pl.edu.agh.kaskadz.sr.distributedmap.Main'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

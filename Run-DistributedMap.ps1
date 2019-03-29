@@ -1,0 +1,1 @@
+Invoke-Expression "java -jar .\build\libs\distributedmap-1.0.jar"
