@@ -4,11 +4,9 @@
 .gradle/
 build/
 
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
-gradle/wrapper/gradle-wrapper.properties
-
 ### Java
 *.class
 *.jar
 *.zip
+
+!gradle-wrapper.jar
