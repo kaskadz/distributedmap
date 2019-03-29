@@ -11,4 +11,4 @@ gradle/wrapper/gradle-wrapper.properties
 ### Java
 *.class
 *.jar
-
+*.zip
