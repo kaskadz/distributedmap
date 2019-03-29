@@ -32,7 +32,7 @@ public class DistributedMap implements SimpleStringMap, Receiver {
         }
     }
 
-    public DistributedMap(JChannel channel) {
+    private DistributedMap(JChannel channel) {
         this.channel = channel;
         map = new HashMap<>();
         messageFactory = new MulticastMessageFactory();
